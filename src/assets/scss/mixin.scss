@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+@mixin smallMobile {
+  @media screen and (max-width: $xxs) {
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: ($xs + 1px)) and (max-width: ($md + 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: ($md + 1px)) {
+    @content;
+  }
+}
+
+@mixin noMobile {
+  @media screen and (min-width: ($xs + 1px)) {
+    @content;
+  }
+}
+
+@mixin noDesktop {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin scrollbarTransparent {
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+    margin: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    -webkit-box-shadow: none;
+    border-radius: 24px;
+  }
+  scrollbar-width: thin !important;
+  overflow: auto;
+}
+
+@mixin ellipsis($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+@mixin flex_center_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

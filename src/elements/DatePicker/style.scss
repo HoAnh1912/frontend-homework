@@ -1,0 +1,57 @@
+.datepicker-wrapper{
+    position: relative;
+    .text-field{
+        white-space: nowrap;
+        font-size: 16px;
+        color: #969696;
+        font-weight: 400;
+    }
+    .date-picker{
+        position: absolute;
+        .picker{
+        position: relative;
+        .text-show{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: black;
+            z-index: 2;
+        }
+        .MuiStack-root {
+            -webkit-box-shadow: 0px 1px 11px -1px rgba(9,91,255,0.39); 
+            box-shadow: 0px 1px 11px -1px rgba(9,91,255,0.39);
+           border-radius: 10px;
+           padding-top: 0px;
+            .MuiPickersLayout-root{
+                background-color: transparent;
+    
+                .MuiPickersLayout-contentWrapper{
+                    z-index: 1;
+                    background-color: white;
+                    border-radius: 10px;
+                    .MuiDateCalendar-root{
+                        .MuiPickersCalendarHeader-root {
+                            .MuiPickersCalendarHeader-labelContainer {
+                                .MuiPickersFadeTransitionGroup-root{
+                                    display: none;
+                                }
+                                .MuiButtonBase-root{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .MuiPickersToolbar-root {
+                    display: none;
+                }
+                .MuiDialogActions-root{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    }
+
+}

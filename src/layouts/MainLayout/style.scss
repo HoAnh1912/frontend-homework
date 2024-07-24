@@ -1,0 +1,133 @@
+@import 'assets/scss/variables.scss';
+@import 'assets/scss/mixin.scss';
+@import 'sass-rem';
+
+.main-layout {
+  background-color: #f9f9f9;
+  height: 100%;
+  display: flex;
+
+  h1 {
+    margin: 0;
+  }
+
+  .header-layout {
+    height: rem-convert(60px);
+    background: $white-color;
+    .menu-collapse-icon {
+      position: absolute;
+      top: rem-convert(20px);
+      left: rem-convert(16px);
+      cursor: pointer;
+    }
+  }
+
+  .ps-sidebar-container {
+    display: flex;
+    flex-direction: column;
+    color: $main-color;
+    background: $white-color;
+    position: relative;
+
+    .sidebar-menu-content {
+      flex: 1;
+      @include scrollbarTransparent;
+      .ps-menu-root {
+        .ps-menu-button {
+          .ps-menu-label {
+            font-size: 1rem;
+          }
+
+          .ps-menu-icon {
+            color: $main-color;
+            &:hover {
+              color: $white-color;
+            }
+          }
+
+          .ps-submenu-expand-icon > span {
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+        }
+
+        .ps-active {
+          font-weight: 700;
+          background-color: $main-color;
+          color: $white-color;
+        }
+      }
+    }
+
+    .sidebar-header {
+      margin-bottom: rem-convert(24px);
+
+      .sidebar-logo-wrapper {
+        margin-left: rem-convert(2px);
+        background-color: transparent;
+        background: transparent;
+
+        .sidebar-logo {
+          width: rem-convert(38px);
+          height: rem-convert(38px);
+        }
+      }
+    }
+
+    .sidebar-footer {
+      border-top: 1px solid $main-color;
+      position: fixed;
+      bottom: 0;
+      position: sticky;
+      background: $white-color;
+
+      .sidebar-footer-content {
+        display: flex;
+        padding: rem-convert(10px);
+        align-items: center;
+      }
+
+      .sidebar-footer-closed {
+        justify-content: center;
+        width: rem-convert(80px);
+        min-width: rem-convert(80px);
+      }
+
+      .sidebar-footer-collapse {
+        justify-content: flex-end;
+      }
+
+      .MuiSvgIcon-root {
+        cursor: pointer;
+        width: rem-convert(30px);
+        height: rem-convert(30px);
+        color: $main-color;
+      }
+    }
+  }
+
+  .ps-collapsed .ps-sidebar-container .ps-menu-root .ps-submenu-root {
+    .ps-submenu-content {
+      li {
+        .ps-menu-label {
+          color: #11324d;
+          font-weight: 500;
+        }
+      }
+
+      .ps-active {
+        background-color: #d2f4fb;
+
+        .ps-menu-label {
+          font-weight: 700;
+          color: #233e55;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .notification {
+    border-radius: rem-convert(6px);
+  }
+}

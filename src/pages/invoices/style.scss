@@ -1,0 +1,9 @@
+@import 'assets/scss/variables.scss';
+@import 'assets/scss/mixin.scss';
+@import 'sass-rem';
+
+.icon_export {
+  height: rem-convert(20px);
+  width: rem-convert(20px);
+  cursor: pointer;
+}

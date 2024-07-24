@@ -1,0 +1,30 @@
+.tab-wrapper{
+    // background-color: white;
+    // padding: 20px;
+    // margin: 20px;
+    // border-radius: 10px;
+    .MuiBox-root{
+        .MuiBox-root{
+            .Mui-selected {
+                color: #666666;
+                background: #80808026;
+
+            }
+            .MuiTabs-flexContainer{
+                gap: 10px;
+                .MuiButtonBase-root{
+                    text-transform: none;
+                    width: fit-content;
+                    border-radius: 5px;
+                    padding: 10px;
+                    min-height: initial
+                    ;min-width: initial;    
+                }
+            }
+           
+            .MuiTabs-indicator{
+                display: none;
+            }
+        }
+    }
+}
